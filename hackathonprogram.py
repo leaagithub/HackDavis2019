@@ -56,7 +56,15 @@ with open('SSRList.txt','r') as f:
         print iteratorCount
         print line
         print indexlist
-        writeOutput(line,iteratorCount,indexlist)
+        if iteratorCount != 0:
+            writeOutput(line,iteratorCount,indexlist)
+            insertionCount += 1
+            print 'SSR Found: ' ,insertionCount
+
+        else:
+            zeroCount += 1
+            print '0 SSR Found. Zero Count: ', zeroCount
+
         iteratorCount = 0
         del indexlist[:]
         checkCount += 1
