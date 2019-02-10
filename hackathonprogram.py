@@ -39,7 +39,6 @@ with open('SSRList.txt','r') as f:
         line = line.replace('\r',"")
         line = line.replace('\n',"")
         line = line.replace(' ',"")
-        if line == "AT":
             #print 'works'
         #print line
         m = re.compile(line)
