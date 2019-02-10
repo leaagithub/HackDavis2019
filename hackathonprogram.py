@@ -40,12 +40,12 @@ with open('SSRList.txt','r') as f:
         line = line.replace('\n',"")
         line = line.replace(' ',"")
         if line == "AT":
-            print 'works'
+            #print 'works'
         #print line
         m = re.compile(line)
         #translates string into object
         for match in m.finditer(DNASeq):
-            print 'for loop check'
+            #print 'for loop check'
             #MATCHES SSR INTO DATA SEQUENCES AND INCREMENTS IF FOUND, GOES NEXT
             iteratorCount += 1
             #print match.span()
@@ -53,9 +53,9 @@ with open('SSRList.txt','r') as f:
             #print l
             indexlist.append(l)
             #print indexes
-        print iteratorCount
-        print line
-        print indexlist
+        #print iteratorCount
+        #print line
+        #print indexlist
         if iteratorCount != 0:
             writeOutput(line,iteratorCount,indexlist)
             insertionCount += 1
