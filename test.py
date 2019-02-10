@@ -2,7 +2,7 @@
 import re
 
 DNASeq = ''
-SSR = 'A'
+SSR = 'AT'
 iteratorCount = 0
 indexlist = []
 

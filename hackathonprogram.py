@@ -34,12 +34,16 @@ DNASeq = getDNASeq();
 writeHeader();
 with open('SSRList.txt','r') as f:
     for line in f:
-        line = line.rstrip('\n')
+        line = str(line)
+        #line = line.rstrip('\n')
+        line = line.replace('\r',"")
+        line = line.replace('\n',"")
+        line = line.replace(' ',"")
+        if line == "AT":
+            print 'works'
         #print line
         m = re.compile(line)
-        print m
         #translates string into object
-        print DNASeq
         for match in m.finditer(DNASeq):
             print 'for loop check'
             #MATCHES SSR INTO DATA SEQUENCES AND INCREMENTS IF FOUND, GOES NEXT
